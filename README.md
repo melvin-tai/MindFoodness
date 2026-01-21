@@ -1,6 +1,12 @@
 # MindFoodness
 _Project Prototype by Team CoLabs (KitaHack 2026)_
 
+    Team Members:
+        Gracia Cheong
+        Jiayi Chen
+        Melvin Tai
+        Rishidesh Singh
+
 ###### Links: [Project Description](https://docs.google.com/document/d/1VxyR0r-EY3K2TtNUxoYwTPV2nDVVob8laGmwB73uIYg/edit?tab=t.gq07mg7py7z6) | [Technical Implementation Overview](https://docs.google.com/presentation/d/18qDQ-OEVjeLq51vIHNkgcUXYY4AtdjjztZLzuSfwdQY/edit?usp=sharing) | [Demo Video]()
 
 ---
@@ -21,13 +27,15 @@ The project addresses a real-world health challenge: people generate large amoun
     Promote preventive healthcare and healthier lifestyles through informed daily decision-making.
 
 **Problem Statement**
+
 Despite widespread access to fitness trackers and nutrition information, most individuals make food decisions without understanding how their current health state (sleep, stress, heart rate, activity) should influence what they eat. This leads to hidden nutritional imbalances, reduced energy levels, and preventable long-term health risks.
 
 Existing nutrition apps rely heavily on manual tracking and generic recommendations, which fail to adapt to a user’s real-time physiological condition. Therefore,
 
     How can AI be used to interpret biometric health data and transform it into actionable, personalized nutrition guidance that current diet and fitness tools fail to deliver, in order to reduce hidden nutritional imbalances and improve daily well-being?
 
-##### Why do we need A.I. here?
+**Why do we need A.I. here?**
+
 Interpreting multiple biometric signals simultaneously is cognitively demanding and impractical for daily use. A.I. enables:
 
     - Pattern recognition across health indicators
@@ -100,17 +108,19 @@ We chose Gemini over Vertex A.I., as Gemini excels at contextual reasoning and n
     Raw biometric values (e.g., sleep hours, stress scores) are difficult for AI to interpret consistently without structure.
 
 **Solution**
+
 We implemented a preprocessing layer that:
 
-    Normalizes biometric values
-    Converts raw data into structured health indicators
-    Ensures consistent, interpretable AI prompts
-    This improved recommendation relevance and reduced response variability.
+    - Normalizes biometric values
+    - Converts raw data into structured health indicators
+    - Ensures consistent, interpretable AI prompts
+    - This improved recommendation relevance and reduced response variability.
 
 ---
 
 ### User Feedback & Iteration
 **User Testing Process**
+
 - Conducted 3 Zoom sessions with real users outside the team
 - Each participant identified 2-3 issues
 - All sessions were recorded and uploaded to this [Google Drive]()
