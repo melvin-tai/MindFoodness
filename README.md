@@ -114,7 +114,8 @@ We implemented a preprocessing layer that:
     - Normalizes biometric values
     - Converts raw data into structured health indicators
     - Ensures consistent, interpretable AI prompts
-    - This improved recommendation relevance and reduced response variability.
+
+This improved recommendation relevance and reduced response variability.
 
 ---
 
