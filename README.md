@@ -2,9 +2,9 @@
 _Project Prototype by Team CoLabs (KitaHack 2026)_
 
     Team Members:
+        Melvin Tai (Leader)
         Gracia Cheong
         Jiayi Chen
-        Melvin Tai
         Rishidesh Singh
 
 ###### Links: [Project Description](https://docs.google.com/document/d/1VxyR0r-EY3K2TtNUxoYwTPV2nDVVob8laGmwB73uIYg/edit?tab=t.gq07mg7py7z6) | [Technical Implementation Overview](https://docs.google.com/presentation/d/18qDQ-OEVjeLq51vIHNkgcUXYY4AtdjjztZLzuSfwdQY/edit?usp=sharing) | [GitHub Live-Hosted Demo](https://melvin-tai.github.io/MindFoodness/) | [Demo Video]()
