@@ -1,1 +1,84 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+.container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.output {
+  margin-top: 30px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  font-size: 0.9rem;
+}
+
+.output h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
