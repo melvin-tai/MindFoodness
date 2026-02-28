@@ -108,9 +108,10 @@ We chose Gemini over Vertex A.I., as Gemini excels at contextual reasoning and n
 MindFoodness is designed to be compatible with wearable health data from Google Fit and Fitbit, enabling seamless ingestion of biometric signals already collected by users’ devices.
 
 Google Fit provides APIs that allow user-authorized access to:
-- Sleep duration
-- Heart rate
-- Activity levels (steps, calories, active minutes)
+
+    - Sleep duration
+    - Heart rate
+    - Activity levels (steps, calories, active minutes)
 
 Fitbit exposes similar metrics through the Fitbit Web API, including:
 
@@ -119,14 +120,16 @@ Fitbit exposes similar metrics through the Fitbit Web API, including:
     - Daily activity and recovery indicators
 
 These data points directly map to MindFoodness’s required inputs:
-- Sleep duration → Sleep quality indicator
-- Heart rate / HRV → Stress marker
-- Activity data → Recovery and exertion level
+
+    - Sleep duration → Sleep quality indicator
+    - Heart rate / HRV → Stress marker
+    - Activity data → Recovery and exertion level
 
 MindFoodness would integrate these platforms using:
-- OAuth-based user consent
-- Periodic data sync (e.g. daily summaries rather than continuous streaming)
-- Preprocessing to normalize wearable data before computing the Physiological State Index (PSI)
+
+    - OAuth-based user consent
+    - Periodic data sync (e.g. daily summaries rather than continuous streaming)
+    - Preprocessing to normalize wearable data before computing the Physiological State Index (PSI)
 
 Importantly, the system does not depend on real-time sensor streaming. Daily or session-based summaries from Google Fit or Fitbit are sufficient for accurate PSI calculation and nutrition reasoning, making integration lightweight and scalable.
 
