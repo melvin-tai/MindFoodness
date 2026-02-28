@@ -4,18 +4,26 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Playwrite DE Grund", sans-serif;
   background: #fafafa;
   color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-.container {
+main {
   max-width: 420px;
+  width: 100%;
   margin: 60px auto;
   padding: 0 20px;
+  animation: fadeSlideUp 0.6s ease-out;
 }
 
 h1 {
+  font-family: "Bubbler One", sans-serif;
+  color: #008000;
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 8px;
@@ -28,33 +36,36 @@ h1 {
   margin-bottom: 30px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.field label {
+label {
   display: block;
   font-size: 0.8rem;
   margin-bottom: 4px;
   color: #444;
+  transition: color 0.2s ease;
 }
 
-.field input {
+label:hover {
+  color: #008000;
+}
+
+input {
   width: 100%;
   padding: 10px;
   font-size: 0.9rem;
   border: 1px solid #ddd;
   border-radius: 6px;
+  margin-bottom: 14px;
+  background: #fff;
+  transition: border-color 0.2s ease;
 }
 
-.field input:focus {
+input:focus {
   outline: none;
   border-color: #999;
 }
 
 button {
+  font-family: "Funnel Display", sans-serif;
   margin-top: 10px;
   padding: 12px;
   font-size: 0.9rem;
@@ -63,10 +74,26 @@ button {
   background: #111;
   color: white;
   cursor: pointer;
+  width: 100%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
 }
 
 button:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#status {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: #555;
+  animation: fadeIn 0.4s ease;
 }
 
 .output {
@@ -81,4 +108,31 @@ button:hover {
 .output h3 {
   margin-top: 0;
   font-weight: 500;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }

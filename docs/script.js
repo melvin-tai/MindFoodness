@@ -1,10 +1,3 @@
-import { buildPrompt } from "../backend/promptBuilder.js";
-import { callGemini } from "../backend/geminiClient.js";
-import { signInUser } from "../firebase/auth.js";
-import { saveSessionData } from "../firebase/firestore.js";
-
-await signInUser();
-
 document.getElementById("healthForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -16,8 +9,7 @@ document.getElementById("healthForm").addEventListener("submit", async (e) => {
     energyLevel: document.getElementById("energy").value
   };
 
-  const prompt = buildPrompt(biometrics);
-  const aiResponse = await callGemini(prompt);
+  const aiResponse = await callGemini(biometrics);
 
   document.getElementById("output").innerHTML = `
     <h3>AI Insight</h3>
@@ -27,6 +19,17 @@ document.getElementById("healthForm").addEventListener("submit", async (e) => {
     </ul>
     <p><strong>Why:</strong> ${aiResponse.explanation}</p>
   `;
-
-  await saveSessionData({ biometrics, aiResponse });
 });
+
+async function callGemini(prompt) {
+  return {
+    summary: "Your body shows signs of high stress and moderate fatigue.",
+    recommendations: [
+      "Eat magnesium-rich foods",
+      "Increase complex carbohydrates",
+      "Reduce caffeine intake"
+    ],
+    explanation:
+      "Low sleep and elevated stress suggest a need for calming nutrients and stable energy."
+  };
+}
