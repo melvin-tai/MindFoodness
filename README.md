@@ -7,7 +7,7 @@ _Project Prototype by Team CoLabs (KitaHack 2026)_
         Jiayi Chen
         Rishidesh Singh
 
-###### Links: [Project Description](https://docs.google.com/document/d/1VxyR0r-EY3K2TtNUxoYwTPV2nDVVob8laGmwB73uIYg/edit?tab=t.gq07mg7py7z6) | [Score System / Implementation Logic](https://docs.google.com/spreadsheets/d/1GGxdSje8SRe4_t-54YKcuBxKYf1alqmOOfgnXhYn2M0/edit?usp=sharing) | [GitHub Live-Hosted Demo](https://melvin-tai.github.io/MindFoodness/) | [Demo Video]()
+###### Links: [Project Description](https://docs.google.com/document/d/1VxyR0r-EY3K2TtNUxoYwTPV2nDVVob8laGmwB73uIYg/edit?tab=t.gq07mg7py7z6) | [Score System / Implementation Logic](https://docs.google.com/spreadsheets/d/1GGxdSje8SRe4_t-54YKcuBxKYf1alqmOOfgnXhYn2M0/edit?usp=sharing) | [GitHub Live-Hosted Demo](https://melvin-tai.github.io/MindFoodness/) | [Demo Video](https://youtu.be/4CejaIl_LMY)
 
 ---
 
