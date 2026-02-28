@@ -183,14 +183,13 @@ This improved recommendation relevance and reduced response variability.
 ### User Feedback & Iteration
 **User Testing Process**
 
-- Conducted 3 Zoom sessions with real users outside the team
-- Each participant identified 2-3 issues
-- All sessions were recorded and uploaded to this [Google Drive]()
+- Conducted user testing with 3 real users outside the team via Whatsapp texting
+- Each participant identified 1-2 issues
 
 **Key User Insights**
-1. -
-2. -
-3. -
+1. Users were impressed by the personalization and clarity of AI-generated nutrition recommendations, which helped them understand how their current physiological state affected their diet.
+2. Users struggled with manually entering multiple biometric inputs, finding it time-consuming compared to automated wearable integration.
+3. The context-aware reasoning and explanations were seen as the most valuable feature, allowing users to see why specific foods were suggested based on stress, sleep, and activity levels.
 
 ---
 
