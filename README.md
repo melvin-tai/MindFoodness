@@ -18,6 +18,35 @@ The project addresses a real-world health challenge: people generate large amoun
 
     This project uses Google Gemini for A.I. reasoning and Firebase for data storage and authentication.
 
+**MindFoodness** works by translating biometric data into personalized nutrition guidance through a physiological reasoning layer.
+
+First, the user provides five inputs: 
+- sleep duration, 
+- heart rate variability (HRV), 
+- physical activity level, 
+- diet preference, and 
+- allergies.
+
+These biometric signals are then processed using our Physiological State Index, or PSI, which is a composite score representing the user’s current stress and recovery condition.
+
+The PSI combines three key indicators:
+- sleep quality,
+- HRV as a stress marker, and
+- activity level as a recovery indicator.
+
+For example, shorter sleep or low HRV increases physiological stress, while sufficient activity improves recovery.
+
+Based on the calculated PSI, the system classifies the user into low, moderate, or high stress states.
+
+This state directly determines nutritional priorities.
+If stress is high, the AI prioritizes anti-inflammatory foods; if recovery is good, it recommends maintenance or performance-support nutrition instead.
+
+Finally, Gemini AI generates personalized food recommendations while respecting the user’s diet and allergy constraints.
+
+So instead of randomly suggesting meals, our system follows a clear pipeline:
+
+> Biometrics → Physiological Interpretation → Nutrition Decisions.
+
 ---
 
 ### UN Sustainable Development Goal (SDG) 3: Good Health and Well-Being
@@ -73,6 +102,38 @@ We chose Gemini over Vertex A.I., as Gemini excels at contextual reasoning and n
     - Firestore: Stores user biometric inputs and A.I. outputs
     - Firebase Authentication: Manages secure user sign-in
     Firebase was chosen for its simplicity, real-time data handling, and scalability for a prototype-level system.
+
+**3. Google Fit & Fitbit** (Extensibility and Integration)
+
+MindFoodness is designed to be compatible with wearable health data from Google Fit and Fitbit, enabling seamless ingestion of biometric signals already collected by users’ devices.
+
+Google Fit provides APIs that allow user-authorized access to:
+
+    - Sleep duration
+    - Heart rate
+    - Activity levels (steps, calories, active minutes)
+
+Fitbit exposes similar metrics through the Fitbit Web API, including:
+
+    - Heart rate trends and variability
+    - Sleep stages and duration
+    - Daily activity and recovery indicators
+
+These data points directly map to MindFoodness’s required inputs:
+
+    - Sleep duration → Sleep quality indicator
+    - Heart rate / HRV → Stress marker
+    - Activity data → Recovery and exertion level
+
+MindFoodness would integrate these platforms using:
+
+    - OAuth-based user consent
+    - Periodic data sync (e.g. daily summaries rather than continuous streaming)
+    - Preprocessing to normalize wearable data before computing the Physiological State Index (PSI)
+
+Importantly, the system does not depend on real-time sensor streaming. Daily or session-based summaries from Google Fit or Fitbit are sufficient for accurate PSI calculation and nutrition reasoning, making integration lightweight and scalable.
+
+As a result, MindFoodness can evolve from manual biometric input to automatic, wearable-driven personalization without architectural changes to the AI or backend logic.
 
 ---
 
@@ -136,13 +197,14 @@ This improved recommendation relevance and reduced response variability.
 ### Scalability & Next Steps
 **Short-Term**
 
-    - Integrate wearable platforms (e.g., Google Fit)
+    - Integrate wearable platforms 
+    - Automation via Google Fit and Fitbit
     - Expand food and nutrient database
     - Improve personalization depth
 
 **Long-Term**
 
-    - Mobile app implementation
+    - Mobile app and sub-devices implementation (Earphones, Smart Watches, etc.)
     - Longitudinal health trend analysis
     - Preventive nutrition insights at scale
     - Scalability Justification
